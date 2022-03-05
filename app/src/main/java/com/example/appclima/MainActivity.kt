@@ -9,6 +9,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.google.gson.Gson
 import java.net.URL
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         }else {
             //MOSTRAR MENSAJE DE ERROR
         }
-
+        /*
         val ciudadfcp = Ciudad("Felipe Carrillo Puerto", 27, "Soleado")
         val ciudadtul = Ciudad("Tulum", 24, "Soleado")
         val ciudadcan = Ciudad("Cancun", 26, "Nublado")
@@ -65,18 +66,24 @@ class MainActivity : AppCompatActivity() {
                 tvGrados?.text = ciudadpla.grados.toString() + "°"
                 tvEstatus?.text = ciudadpla.estatus
             }
-        }
+        }*/
     }
     private fun solicitudHTTPVolley(url: String) {
         val queue = Volley.newRequestQueue(this)
 
-        val solicitud = StringRequest(Request.Method.GET, url, Response.Listener<String> {
+        val solicitud = StringRequest(Request.Method.GET, url, {
                 response ->
             try {
                 Log.d( "solicitudHTTPVolley", response)
+
+                val gson = Gson()
+                val ciudad = gson.fromJson(response, Ciudad::class.java)
+                tvCiudad?.text = ciudad.name
+                tvGrados?.text= ciudad.main?.temp.toString() + "°"
+                tvEstatus?.text=ciudad.weather?.get(0)?.description
             } catch (e: Exception) {
             }
-        }, Response.ErrorListener {})
+        }, {})
         queue.add(solicitud)
     }
 
