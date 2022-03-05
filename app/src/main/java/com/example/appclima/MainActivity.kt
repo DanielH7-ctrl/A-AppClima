@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         if(Network.isNetworkAvailable(this)){
             //EJECUTAR SOLICITUD HTTP
-            solicitudHTTPVolley("http://api.openweathermap.org/data/2.5/weather?id=3527639&appid=a0bb28f0216d0f9427c2ea0e58fe124c")
+            solicitudHTTPVolley("http://api.openweathermap.org/data/2.5/weather?id="+ciudad+"&appid=a0bb28f0216d0f9427c2ea0e58fe124c&units=metric&lang=es")
             //a0bb28f0216d0f9427c2ea0e58fe124c
             //Felipe Carrillo Puerto 3527639
         }else {

@@ -25,25 +25,25 @@ class Ciudades : AppCompatActivity() {
         bfcp.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, "Felipe Carrillo Puerto", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra(TAG, "ciudad-felipecarrillopuerto")
+            intent.putExtra(TAG, "3527639")
             startActivity(intent)
         })
         btul.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, "Tulum", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra(TAG, "ciudad-tulum")
+            intent.putExtra(TAG, "3515040")
             startActivity(intent)
         })
         bcan.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, "Cancun", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra(TAG, "ciudad-cancun")
+            intent.putExtra(TAG, "3531673")
             startActivity(intent)
         })
         bpla.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, "Playa Del Carmen", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra(TAG, "ciudad-playadelcarmen")
+            intent.putExtra(TAG, "3521342")
             startActivity(intent)
         })
     }
