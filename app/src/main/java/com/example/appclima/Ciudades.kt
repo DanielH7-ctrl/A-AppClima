@@ -21,6 +21,7 @@ class Ciudades : AppCompatActivity() {
         val btul = findViewById<Button>(R.id.btul)
         val bcan = findViewById<Button>(R.id.bcan)
         val bpla = findViewById<Button>(R.id.bpla)
+        val bsha = findViewById<Button>(R.id.bsha)
 
         bfcp.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, "Felipe Carrillo Puerto", Toast.LENGTH_SHORT).show()
@@ -44,6 +45,12 @@ class Ciudades : AppCompatActivity() {
             Toast.makeText(this, "Playa Del Carmen", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra(TAG, "3521342")
+            startActivity(intent)
+        })
+        bsha.setOnClickListener(View.OnClickListener {
+            Toast.makeText(this, "Shangai", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra(TAG, "1796236")
             startActivity(intent)
         })
     }

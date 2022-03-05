@@ -12,6 +12,7 @@
     <string name="texto_boton_tul">Clima de la ciudad de Tulum</string>
     <string name="texto_boton_can">Clima de la ciudad de Cancun</string>
     <string name="texto_boton_pla">Clima de la ciudad de PLaya Del Carmen</string>
+    <string name="texto_boton_sha">Clima de la ciudad de Shanghai</string>
 
 
 </resources>
